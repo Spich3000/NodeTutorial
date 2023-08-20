@@ -49,7 +49,7 @@ app.get("/api/v1/query", (req, res) => {
     }
 
     if (sortedProducts.length < 1) {
-        res.status(200).send("no products")
+        return res.status(200).send("no products")
     }
 
     res.status(200).json(sortedProducts)
